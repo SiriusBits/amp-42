@@ -3,53 +3,53 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Landing',
+      text: 'Technology Services',
       links: [
         {
-          text: 'Sass',
+          text: 'IT Strategy & Roadmapping',
           href: getPermalink('/landing/saas'),
         },
         {
-          text: 'Startup',
+          text: 'Vendor Advisory & Resource Planning',
           href: getPermalink('/landing/startup'),
         },
         {
-          text: 'Mobile App',
+          text: 'M&A Systems Integration',
+          href: getPermalink('/landing/startup'),
+        },
+        {
+          text: 'Strategy Alignment Workshops',
           href: getPermalink('/landing/mobile-app'),
         },
       ],
     },
     {
-      text: 'Pages',
+      text: 'Data Consulting',
       links: [
         {
-          text: 'Features',
-          href: '#',
+          text: 'Data Strategy & Governance',
+          href: getPermalink('/landing/saas'),
         },
         {
-          text: 'Pricing',
-          href: '#',
+          text: 'Data Management & Operations Consulting',
+          href: getPermalink('/landing/startup'),
         },
         {
-          text: 'About us',
-          href: '#',
+          text: 'Data Migration Consulting',
+          href: getPermalink('/landing/mobile-app'),
         },
         {
-          text: 'Contact',
-          href: '#',
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          text: 'Data Unification & Activation',
+          href: getPermalink('/landing/mobile-app'),
         },
       ],
     },
     {
-      text: 'Widgets',
+      text: 'Work',
+      href: '#',
+    },
+    {
+      text: 'Company',
       href: '#',
     },
     {
@@ -58,7 +58,7 @@ export const headerData = {
     },
   ],
   actions: [
-    { type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
+    { type: 'button', text: 'Contact', href: 'https://github.com/onwidget/astrowind' }
   ],
 };
   

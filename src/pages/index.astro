@@ -24,22 +24,23 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
+    callToAction={{ text: 'Book a Meeting', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:calendar' }}
     callToAction2={{ text: 'Learn more', href: '#features' }}
     image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden"/> with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
+      Data driven technology strategy leveraging the
+      <span class="text-accent dark:text-white highlight"> Modern Data Stack</span> to transform your business
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0 +
-        Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+        <span class="font-semibold">AMP 42</span> empowers businesses to succeed by leveraging the latest in data-driven
+        technology strategy and the Modern Data Stack.
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">AMP 42: Expert Solutions</span> We help transform businesses
+      through our expertise in data engineering, analytics, and visualization, enabling our clients to make better-informed
+      decisions and achieve their goals.
     </Fragment>
   </Hero>
 
@@ -50,48 +51,60 @@ const meta = {
   <!-- Features Widget *************** -->
 
   <Features
-    highlight="Features"
-    title="What you get with AstroWind"
-    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+    highlight="Services"
+    title="Technology planning and data and analytics engineering strategy"
+    subtitle="We leverage decades of collective knowledge, real-world experience and know-how to deliver success for our clients and partners in these areas."
     items={[
       [
         {
-          title: 'Astro + Tailwind CSS Integration',
+          title: 'IT Strategy & Roadmapping',
           description:
-            'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-          icon: 'tabler:brand-tailwind',
+            'With our expertise in both business and technology, our team helps align technology investments to your business strategy and drive top line growth while maximizing value as you bring your strategy to life.',
+          icon: 'road',
         },
         {
-          title: 'Ready-to-use Components',
+          title: 'Vendor Advisory & Resource Planning',
           description:
-            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-          icon: 'tabler:components',
+            'Our collective business experience enables us to help provide an independent, pragmatic, and thoughtful approach to sifting through the hype and matching a solution to your unique challenges.',
+          icon: 'tabler:checkup-list',
         },
         {
-          title: 'Best Practices',
+          title: 'M&A Systems Integration',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:list-check',
+            'Marrying two organizations is a tricky proposition but aligning processes and systems doesn’t have to be the bottleneck. We help companies from the earliest stages of planning to the final cutover.',
+          icon: 'topology-star-ring-3',
+        },
+        {
+          title: 'Strategy Alignment Workshops',
+          description:
+            'Key stakeholder interviews to understand how departmental goals and desired projects align with corporate strategy will assist in shaping cross-functional strategy alignment workshops.',
+          icon: 'users-group',
         },
       ],
       [
         {
-          title: 'Excellent Page Speed',
+          title: 'Data Strategy & Governance',
           description:
-            'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-          icon: 'tabler:rocket',
+            'Our data strategy and governance model provides an achievable vision and flexible framework to improve the effectiveness of data assets without disrupting your business operations.​',
+          icon: 'tabler:compass',
         },
         {
-          title: 'Search Engine Optimization (SEO)',
+          title: 'Data Management & Operations',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:arrows-right-left',
+            'We advise organizations on managing and optimizing data operations, ensuring data quality, implementing observability policies, and creating efficient workflows to support data-driven decision-making.',
+          icon: 'database-cog',
         },
         {
-          title: 'Open to new ideas and contributions',
+          title: 'Data Migration Consulting',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:bulb',
+            'Whether it’s moving to the cloud or to a new platform, data migration creates a sizable impact on your business and daily operations. Our data migration services enable rapid movement of your data with an effective, efficient, and secure approach.',
+          icon: 'stack-pop',
+        },
+        {
+          title: 'Data Unification & Activation',
+          description:
+            'We help clients unify and activate data from disparate sources to derive insights and drive actions.',
+          icon: 'brand-snowflake',
         },
       ],
     ]}
@@ -100,8 +113,8 @@ const meta = {
   <!-- Content Widget **************** -->
 
   <Content
-    highlight="Inside template"
-    title="And what's inside? ..."
+    highlight="Inside AMP 42"
+    title="Our work speaks for itself..."
     items={[
       {
         title: 'Per ei quaeque sensibus',
@@ -162,100 +175,66 @@ const meta = {
     }}
   />
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula.',
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: import('~/assets/images/creativity.jpg'),
-      alt: 'Steps image',
-    }}
-  />
-
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    highlight="Components"
+    title="Technology Partners and Vendors"
+    subtitle="Our network of partners and vendors platforms help us deliver world-class solutions"
+    highlight=""
     items={[
       {
-        title: 'Headers',
+        title: 'Snowflake',
         description:
-          'In general, Headers contain information that makes it easier for visitors to interact with the website.',
-        icon: 'flat-color-icons:template',
+          'Snowflake is a multi-vendor cloud data platform built on a hybrid (shared-disk and shared-nothing) high-performance scalable database architecture.',
+        icon: 'logos:snowflake-icon',
       },
       {
-        title: 'Heros',
+        title: 'Fivetran',
         description:
-          'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
-        icon: 'flat-color-icons:gallery',
+          'Fivetran is an automated data integration platform that simplifies data replication from disparate data sources into an organization’s data warehouse.',
+        icon: 'fivetran-icon',
       },
       {
-        title: 'Features',
+        title: 'Databricks',
         description:
-          'Display your product in action and how the Features actually create a solution for your target customer.',
-        icon: 'flat-color-icons:todo-list',
+          'Databricks is a unified set of tools for building, deploying, sharing, and maintaining enterprise-grade data solutions at scale.',
+        icon: 'databricks-icon',
       },
       {
-        title: 'Content',
+        title: 'Syncari',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:document',
+          'Syncari provides a data automation platform that empowers operations professionals to unify, clean, manage, and distribute trusted customer data across the enterprise.',
+        icon: 'syncari-logo-icon',
       },
       {
-        title: 'Call-to-Action',
+        title: 'dbt',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:advertising',
+          'Acting as a self-documenting orchestration layer on top of your data warehouse, dbt enables data teams to improve and accelerate data transformation and integration processes with SQL and Python.',
+        icon: 'dbt-icon',
       },
       {
-        title: 'Pricing',
+        title: 'Segment',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:currency-exchange',
+          'Segment is a customer data infrastructure (CDI) platform that collects, stores and routes data from users to hundreds of tools and digital properties.',
+        icon: 'logos:segment-icon',
       },
       {
-        title: 'Testimonial',
+        title: 'ZoomInfo',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:voice-presentation',
+          'ZoomInfo is a software as a service (SaaS) company that provides detailed information on millions of businesses and business professionals.',
+        icon: 'zoominfo-icon',
       },
       {
-        title: 'Contact',
+        title: 'Datalogz',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:business-contact',
+          'Datalogz is a BI Ops solution that enables teams to bridge the gaps in their business intelligence environment.',
+        icon: 'datalogz-icon',
       },
       {
-        title: 'Footers',
+        title: 'Hex.tech',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'icon-park:page-template',
+          'Hex is a modern data platform for data science and analytics. Collaborative notebooks, beautiful data apps and enterprise-grade security.',
+        icon: 'hex-icon',
       },
     ]}
   />
@@ -324,10 +303,10 @@ const meta = {
 
   <Stats
     items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
+      { name: 'Migrations', value: '132K' },
+      { name: 'Roadmaps', value: '24.8K' },
+      { name: 'Replatforms', value: '10.3K' },
+      { name: 'Customers', value: '48.4K' },
     ]}
   />
 
@@ -335,13 +314,15 @@ const meta = {
 
   <CallToAction
     callToAction={{
-      text: 'Get template',
+      text: 'Book a Meeting',
       href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      icon: 'tabler:calendar',
     }}
   >
     <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      AMP 42 <br class="block sm:hidden" /><span class="sm:whitespace-nowrap"
+        >Excellence in technology and data strategy</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
