@@ -3,13 +3,13 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'AMP42',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://www.amp42.com',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
+  title: 'AMP 42 — Excellence in technology and data strategy.',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    'Strategy, planning and execution for startups, B2B companies and enterprise organizations.',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
@@ -26,6 +26,11 @@ const CONFIG = {
 
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
   googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+  
+  clearbit: {
+    enabled: true,
+    referrerPolicy: 'strict-origin-when-cross-origin',
+  },
 
   blog: {
     disabled: false,
