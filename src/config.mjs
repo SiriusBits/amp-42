@@ -30,6 +30,13 @@ const CONFIG = {
   clearbit: {
     enabled: true,
     referrerPolicy: 'strict-origin-when-cross-origin',
+    partyTown: true,
+  },
+
+  drift: {
+    enabled: true,
+    id: '2ztye4gur223',
+    partyTown: true,
   },
 
   blog: {
