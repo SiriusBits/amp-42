@@ -11,6 +11,7 @@ import { getRelativeUrlByFilePath } from '~/utils/directories';
 import CustomStyles from '~/components/CustomStyles.astro';
 import SplitbeeAnalytics from './SplitbeeAnalytics.astro';
 import Clearbit from './Clearbit.astro';
+import Drift from './Drift.astro';
 
 export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
@@ -93,7 +94,9 @@ const image =
 
 {SITE.splitbeeAnalytics?.enabled && <SplitbeeAnalytics {...SITE.splitbeeAnalytics} />}
 
-{SITE.clearbit?.enabled && <Clearbit {...SITE.clearbit} partytown={true} />}
+{SITE.clearbit?.enabled && <Clearbit {...SITE.clearbit} />}
+
+{SITE.drift?.enabled && <Drift {...SITE.drift} />}
 
 <link rel="shortcut icon" href={getAsset('/favicon.ico')} />
 <link rel="icon" type="image/svg+xml" href={getAsset('/favicon.svg')} />
