@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
+import { findImage } from '~/utils/images';
 
 interface CallToAction {
   text: string;
@@ -29,6 +30,8 @@ const {
   callToAction2 = await Astro.slots.render('callToAction2'),
   HeroImage = await Astro.slots.render('HeroImage'),
 } = Astro.props;
+
+const imagePath = await findImage(HeroImage.src);
 ---
 
 <section class="relative md:-mt-[76px]">
@@ -94,7 +97,7 @@ const {
         {
           HeroImage && (
             <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
+              {typeof HeroImage === 'string' ? (
                 <Fragment set:html={HeroImage} />
               ) : (
                 <Picture
@@ -105,7 +108,7 @@ const {
                   loading="eager"
                   width={600}
                   height={600}
-                  src={import(HeroImage.src)}
+                  src={imagePath}
                   alt={HeroImage.alt}
                 />
               )}
