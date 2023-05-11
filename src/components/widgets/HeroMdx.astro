@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
-import { findImage } from '~/utils/images';
 
 interface CallToAction {
   text: string;
@@ -30,8 +29,6 @@ const {
   callToAction2 = await Astro.slots.render('callToAction2'),
   HeroImage = await Astro.slots.render('HeroImage'),
 } = Astro.props;
-
-const imagePath = await findImage(HeroImage.src);
 ---
 
 <section class="relative md:-mt-[76px]">
@@ -108,7 +105,7 @@ const imagePath = await findImage(HeroImage.src);
                   loading="eager"
                   width={600}
                   height={600}
-                  src={imagePath}
+                  src={HeroImage.src}
                   alt={HeroImage.alt}
                 />
               )}
