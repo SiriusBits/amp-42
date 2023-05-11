@@ -7,7 +7,7 @@ export const headerData = {
       links: [
         {
           text: 'IT Strategy & Roadmapping',
-          href: getPermalink('/landing/saas'),
+          href: getPermalink('/technology-services/it-strategy-and-roadmapping'),
         },
         {
           text: 'Vendor Advisory & Resource Planning',
