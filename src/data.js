@@ -11,15 +11,15 @@ export const headerData = {
         },
         {
           text: 'Vendor Advisory & Resource Planning',
-          href: getPermalink('/landing/startup'),
+          href: getPermalink('/technology-services/vendor-advisory-and-resource-planning'),
         },
         {
           text: 'M&A Systems Integration',
-          href: getPermalink('/landing/startup'),
+          href: getPermalink('/technology-services/m-and-a-system-integration'),
         },
         {
           text: 'Strategy Alignment Workshops',
-          href: getPermalink('/landing/mobile-app'),
+          href: getPermalink('/technology-services/strategy-alignment-workshops'),
         },
       ],
     },
@@ -28,19 +28,19 @@ export const headerData = {
       links: [
         {
           text: 'Data Strategy & Governance',
-          href: getPermalink('/landing/saas'),
+          href: getPermalink('/data-consulting/data-strategy-and-governance'),
         },
         {
           text: 'Data Management & Operations Consulting',
-          href: getPermalink('/landing/startup'),
+          href: getPermalink('/data-consulting/data-management-and-operations-consulting'),
         },
         {
           text: 'Data Migration Consulting',
-          href: getPermalink('/landing/mobile-app'),
+          href: getPermalink('/data-consulting/data-migration-consulting'),
         },
         {
           text: 'Data Unification & Activation',
-          href: getPermalink('/landing/mobile-app'),
+          href: getPermalink('/data-consulting/data-unification-and-activation'),
         },
       ],
     },
@@ -49,23 +49,19 @@ export const headerData = {
       href: '#',
     },
     {
-      text: 'Company',
+      text: 'About',
       href: '#',
-    },
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
     },
   ],
   actions: [
-    { type: 'button', text: 'Contact', href: 'https://github.com/onwidget/astrowind' }
+    { type: 'button', text: 'Contact', href: '/contact' }
   ],
 };
   
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Technology Services',
       links: [
         { text: 'Features', href: '#' },
         { text: 'Security', href: '#' },
@@ -77,7 +73,7 @@ export const footerData = {
       ],
     },
     {
-      title: 'Platform',
+      title: 'Data Consulting',
       links: [
         { text: 'Developer API', href: '#' },
         { text: 'Partners', href: '#' },
@@ -87,25 +83,22 @@ export const footerData = {
       ],
     },
     {
-      title: 'Support',
+      title: 'Work',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
         { text: 'Professional Services', href: '#' },
         { text: 'Skills', href: '#' },
         { text: 'Status', href: '#' },
       ],
     },
     {
-      title: 'Company',
+      title: 'About',
       links: [
         { text: 'About', href: '#' },
         { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
         { text: 'Press', href: '#' },
         { text: 'Inclusion', href: '#' },
         { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+
       ],
     },
   ],
@@ -121,7 +114,7 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/SiriusBits/Forsemble' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(/favicon-32x32.png)]"></span>
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://www.amp42.com/"> AMP 42</a> · All rights reserved.
   `,
 };
