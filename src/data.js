@@ -21,6 +21,10 @@ export const headerData = {
           text: 'Strategy Alignment Workshops',
           href: getPermalink('/technology-services/strategy-alignment-workshops'),
         },
+        {
+          text: 'Full-Stack Development Services',
+          href: getPermalink('/technology-services/strategy-alignment-workshops'),
+        },
       ],
     },
     {
@@ -31,6 +35,14 @@ export const headerData = {
           href: getPermalink('/data-consulting/data-strategy-and-governance'),
         },
         {
+          text: 'Data Unification & Activation',
+          href: getPermalink('/data-consulting/data-unification-and-activation'),
+        },
+        {
+          text: 'DataOps Planning & Implementation',
+          href: getPermalink('/data-consulting/dataops-planning-and-implementation'),
+        },
+        {
           text: 'Data Management & Operations Consulting',
           href: getPermalink('/data-consulting/data-management-and-operations-consulting'),
         },
@@ -38,10 +50,7 @@ export const headerData = {
           text: 'Data Migration Consulting',
           href: getPermalink('/data-consulting/data-migration-consulting'),
         },
-        {
-          text: 'Data Unification & Activation',
-          href: getPermalink('/data-consulting/data-unification-and-activation'),
-        },
+       
       ],
     },
     {
@@ -63,31 +72,59 @@ export const footerData = {
     {
       title: 'Technology Services',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        {
+          text: 'IT Strategy & Roadmapping',
+          href: getPermalink('/technology-services/it-strategy-and-roadmapping'),
+        },
+        {
+          text: 'Vendor Advisory & Resource Planning',
+          href: getPermalink('/technology-services/vendor-advisory-and-resource-planning'),
+        },
+        {
+          text: 'M&A Systems Integration',
+          href: getPermalink('/technology-services/m-and-a-system-integration'),
+        },
+        {
+          text: 'Strategy Alignment Workshops',
+          href: getPermalink('/technology-services/strategy-alignment-workshops'),
+        },
+        {
+          text: 'Full-Stack Development Services',
+          href: getPermalink('/technology-services/strategy-alignment-workshops'),
+        },
       ],
     },
     {
       title: 'Data Consulting',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        {
+          text: 'Data Strategy & Governance',
+          href: getPermalink('/data-consulting/data-strategy-and-governance'),
+        },
+        {
+          text: 'Data Unification & Activation',
+          href: getPermalink('/data-consulting/data-unification-and-activation'),
+        },
+        {
+          text: 'DataOps Planning & Implementation',
+          href: getPermalink('/data-consulting/dataops-planning-and-implementation'),
+        },
+        {
+          text: 'Data Management & Operations Consulting',
+          href: getPermalink('/data-consulting/data-management-and-operations-consulting'),
+        },
+        {
+          text: 'Data Migration Consulting',
+          href: getPermalink('/data-consulting/data-migration-consulting'),
+        },
       ],
     },
     {
       title: 'Work',
       links: [
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Hire Us', href: '#' },
+        { text: 'Work with Us', href: '#' },
+        { text: 'Customer Stories', href: '#' },
       ],
     },
     {
@@ -95,9 +132,8 @@ export const footerData = {
       links: [
         { text: 'About', href: '#' },
         { text: 'Blog', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
+        { text: 'Partners & Vendors', href: '#' },
+        { text: 'Contact Us', href: '#' },
 
       ],
     },
