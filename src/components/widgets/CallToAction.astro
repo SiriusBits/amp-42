@@ -11,16 +11,18 @@ export interface Props {
   title?: string;
   description?: string;
   callToAction?: string | CallToAction;
+  sectionId?: string;
 }
 
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   callToAction = await Astro.slots.render('callToAction'),
+  sectionId = await Astro.slots.render('sectionId'),
 } = Astro.props;
 ---
 
-<section class="relative">
+<section class="relative" id={sectionId}>
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="py-12 md:py-20">
       <div
