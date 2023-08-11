@@ -15,7 +15,7 @@ export const headerData = {
         },
         {
           text: 'M&A Systems Integration',
-          href: getPermalink('/technology-services/m-and-a-system-integration'),
+          href: getPermalink('/technology-services/m-and-a-systems-integration'),
         },
         {
           text: 'Strategy Alignment Workshops',
@@ -23,7 +23,7 @@ export const headerData = {
         },
         {
           text: 'Full-Stack Development Services',
-          href: getPermalink('/technology-services/strategy-alignment-workshops'),
+          href: getPermalink('/technology-services/full-stack-development-services'),
         },
       ],
     },
@@ -151,6 +151,6 @@ export const footerData = {
   ],
   footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(~/assets/images/favicon.svg)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://www.amp42.com/"> AMP 42</a> · All rights reserved.
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://www.amp42.com/"> AMP42</a> · All rights reserved.
   `,
 };

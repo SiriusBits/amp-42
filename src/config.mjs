@@ -1,14 +1,14 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'AMP 4',
+  name: 'AMP4',
   nameEnd: '2',
 
   origin: 'https://www.amp42.com',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AMP 42 — Excellence in technology and data strategy.',
+  title: 'AMP42 — Excellence in technology and data strategy.',
   description:
     'Strategy, planning and execution for startups, B2B companies and enterprise organizations.',
   defaultImage: defaultImage,
