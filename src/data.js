@@ -15,7 +15,7 @@ export const headerData = {
         },
         {
           text: 'M&A Systems Integration',
-          href: getPermalink('/technology-services/m-and-a-system-integration'),
+          href: getPermalink('/technology-services/m-and-a-systems-integration'),
         },
         {
           text: 'Strategy Alignment Workshops',
@@ -23,7 +23,7 @@ export const headerData = {
         },
         {
           text: 'Full-Stack Development Services',
-          href: getPermalink('/technology-services/strategy-alignment-workshops'),
+          href: getPermalink('/technology-services/full-stack-development-services'),
         },
       ],
     },
