@@ -1,8 +1,8 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'AMP4',
-  nameEnd: '2',
+  name: 'AMP',
+  nameEnd: '42',
 
   origin: 'https://www.amp42.com',
   basePathname: '/',
