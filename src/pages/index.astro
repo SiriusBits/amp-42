@@ -6,7 +6,6 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -24,23 +23,23 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Book a Meeting', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:calendar' }}
+    callToAction={{ text: 'Book a Meeting', href: 'https://calendly.com/amp42/discovery', icon: 'tabler:calendar' }}
     callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    image={{ src: import('~/assets/images/3d-data-points-hero.png'), alt: 'AMP42 Hero Image' }}
   >
     <Fragment slot="title">
-      Data driven technology strategy leveraging the
+      Data-driven technology strategy, leveraging the
       <span class="text-accent dark:text-white highlight"> Modern Data Stack</span> to transform your business
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AMP 42</span> empowers businesses to succeed by leveraging the latest in data-driven
-        technology strategy and the Modern Data Stack.
+        <span class="text-primary font-semibold">AMP</span><span class="text-accent font-semibold">42</span> empowers businesses
+        to succeed by leveraging the latest in data-driven technology strategy and the Modern Data Stack.
       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AMP 42: Expert Solutions</span> We help transform businesses
-      through our expertise in data engineering, analytics, and visualization, enabling our clients to make better-informed
-      decisions and achieve their goals.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">AMP42: Expert Solutions</span> We help transform businesses
+      through our expertise in data engineering, technology planning, solution design, full-stack development, AI and machine
+      learning, analytics, and visualization, enabling our clients to make better-informed decisions and achieve their goals.
     </Fragment>
   </Hero>
 
@@ -68,6 +67,12 @@ const meta = {
             'Our collective business experience enables us to help provide an independent, pragmatic, and thoughtful approach to sifting through the hype and matching a solution to your unique challenges.',
           icon: 'tabler:checkup-list',
         },
+        /*{
+          title: 'Technical Solution Architecture Services',
+          description:
+            'We provide custom software solutions with expertly designed, scalable, and high-performing architectures, tailored to your tech stack and specific needs, ensuring successful project outcomes and future adaptability.',
+          icon: 'tabler:checkup-list',
+        },*/
         {
           title: 'M&A Systems Integration',
           description:
@@ -80,13 +85,31 @@ const meta = {
             'Key stakeholder interviews to understand how departmental goals and desired projects align with corporate strategy will assist in shaping cross-functional strategy alignment workshops.',
           icon: 'users-group',
         },
+        {
+          title: 'Full-Stack Development Services',
+          description:
+            'From front-end user interfaces to back-end server logic, our team of experienced developers ensures seamless integration and high-performance applications, delivering a comprehensive and efficient digital experience for your customers.',
+          icon: 'user-code',
+        },
       ],
       [
         {
           title: 'Data Strategy & Governance',
           description:
-            'Our data strategy and governance model provides an achievable vision and flexible framework to improve the effectiveness of data assets without disrupting your business operations.​',
+            'Our data strategy and governance model provides an achievable vision and flexible framework to improve the effectiveness of data assets without disrupting your business operations.',
           icon: 'tabler:compass',
+        },
+        {
+          title: 'Data Unification & Activation',
+          description:
+            'We help clients unify and activate data from disparate sources to derive insights and drive actions.',
+          icon: 'brand-snowflake',
+        },
+        {
+          title: 'DataOps Planning & Implementation',
+          description:
+            'We help organizations enhance DataOps practices, combining BI Ops and ML Ops to accelerate AI Ops for efficient decision-making, intelligent automation and proactive insights to optimize IT operations.',
+          icon: 'chart-grid-dots',
         },
         {
           title: 'Data Management & Operations',
@@ -100,12 +123,6 @@ const meta = {
             'Whether it’s moving to the cloud or to a new platform, data migration creates a sizable impact on your business and daily operations. Our data migration services enable rapid movement of your data with an effective, efficient, and secure approach.',
           icon: 'stack-pop',
         },
-        {
-          title: 'Data Unification & Activation',
-          description:
-            'We help clients unify and activate data from disparate sources to derive insights and drive actions.',
-          icon: 'brand-snowflake',
-        },
       ],
     ]}
   />
@@ -113,67 +130,37 @@ const meta = {
   <!-- Content Widget **************** -->
 
   <Content
-    highlight="Inside AMP 42"
-    title="Our work speaks for itself..."
+    highlight="Modernize your data stack"
+    title="Three pillars of good data"
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Transformation',
         description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+          'Data transformation via ELT (Extract, Load, Transform) offers significant advantages in modern data engineering. By starting with raw data from diverse sources, the transformation phase empowers data engineers to leverage parallel processing capabilities, making it easier to handle large volumes of data and enabling faster insights and analytics.',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Unification',
         description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+          'Unifying records with a shared schematic footprint drastically improves the immediate value of your data. In addition to helping address the inevitable challenge of slowly changing dimensions, unification maximizes the completeness, accuracy and resilience of your data.',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Activation',
         description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+          'Just as an up-front ELT approach ensures good, clean data, using an effective reverse ETL strategy leads to better predictive models, just-in-time activation and the <em>right</em> data for everyone and every occasion.',
       },
     ]}
     image={{
-      src: import('~/assets/images/caos.jpg'),
+      src: import('~/assets/images/three-data-pillars.jpg'),
       alt: 'Colorful Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-      Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
-      tacimates.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        A new way of thinking about data strategy
+      </h3>
+      The modern data stack makes historically challenging work simpler, easier and more efficient.
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Per ei quaeque sensibus',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-      },
-      {
-        title: 'Per ei quaeque sensibus',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-      },
-    ]}
-    image={{
-      src: import('~/assets/images/vintage.jpg'),
-      alt: 'Vintage Image',
-    }}
-  />
 
   <!-- Features2 Widget ************** -->
 
@@ -242,16 +229,14 @@ const meta = {
   <!-- HighlightedPosts Widget ******* -->
 
   <LatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-			Astro is a very interesting technology. Thanks.
+    title="Explore our ideas, guides and stay informed"
+    information={`This collection of articles, posts, and guides is a free resource of information we collect and share regarding the latest tools, trends, and topics in technology and data.
 		`}
     postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
+      'how-to-get-the-most-out-of-your-technology-assessment.md',
+      'snowflake-plus-dbt---data-unification-in-the-cloud.md',
+      'mapping-the-intrinsic-data-structure-of-one-business-system-with-another.md',
+      'leveraging-ai-to-supplement-and-streamline-customer-support-teams.md',
     ]}
   />
 
@@ -259,41 +244,46 @@ const meta = {
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+    subtitle="The modern technology and data landscape is complex, ever changing and fast-paced. AMP42 can help your business overcome these hurdles, break down data siloes and overcome your technical debt."
     highlight="FAQs"
     items={[
       [
         {
-          question: 'What do I need to start?',
+          question:
+            'We have invested a significant amount in a <em>[tech/data vendor]</em> or <em>[platform]</em> but we are struggling to roll it out, increase adoption, or intergrate it with our core business systems. How can AMP42 help with deployment and adoption to get measurable ROI from our investment?',
           answer:
-            'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+            'The <a href="https://www.zippia.com/advice/cloud-adoption-statistics/" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">average enterprise</a> uses <strong>1,295 cloud services</strong> and <a href="https://nexthink.com/resource/unused-software-licenses" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">it\'s estimated</a> that nearly half of enterprise software goes unused, costing businesses an estimated $536,923,8121 per year. Our team\'s experienced professionals have successfully deployed, re-platformed and transformed hundreds of the most routinely used technology and data vendors. We help organizations accelerate the deployment and adoption of these systems, empowering your team and their stakeholders to get the most from both your technology investments and the valuable employees that use them.',
         },
         {
-          question: 'How to install the Astro + Tailwind CSS template?',
+          question: 'Our data and tech stack is a mess. Where do we start?',
           answer:
-            "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
+            'Every organization has some trouble managing their data, and tech stack sprawl is one of the most common reasons organizations experience inefficiencies, poor collaboration, and lose money. The good news is, we can help make an immediate impact with an easy, guided, appreciative inquiry. Oh and <a href="#book-a-meeting" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">it\'s completely <em>free</em></a>.',
         },
         {
-          question: "What's something that you don't understand?",
+          question:
+            'Working with our procurement/cyber security/legal team(s) takes <em>forever</em>. How would working with a technology and data partner like AMP42 help?',
           answer:
-            "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+            'Internal support teams are an important part of a healthy business, even if it they seem to slow things down or over-complicate the process. The good news is, we love partnering with procurement, helping translate technical details for our friends in legal, and privacy and security are as important to us as they are to your cyber security business partners. Our team of trusted advisors have extensive experience working with these teams and the vednors you want to leverage. We can help you navigate the pitfalls and challenges that come with the territory.',
         },
       ],
       [
         {
-          question: "What's an example of when you changed your mind?",
+          question:
+            "<strong>AI</strong> and <strong>machine learning</strong> seem like buzzwords, irrelevant to our business but we're getting pressure from the business to include them. How can we use these technologies to improve our business or product?",
           answer:
-            "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+            '<strong>Chat GPT! LLMs! AI Assitants!</strong> With so much hype in the AI and machine learning space, it can be hard to understand where and how your business could benefit from this emerging industry. We can help you cut through the static and understand the opportunities for introducing AI, LLMs and machine learning in ways that can improve your business or enhance your products and solutions.',
         },
         {
-          question: 'What is something that you would like to try again?',
+          question:
+            'Our Sales/Marketing/IS/Product/Customer Success teams struggle to work together. How can we achieve better alignment and collaboration?',
           answer:
-            "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+            "Whether you have an in-house team or rely on contractors and professional services or <strong>both</strong>, deploying, integrating and driving user adoption of enterprise technology and data systems is a tremendous challenge. As organizations grow in size and complexity, this is further complicated amongst internal teams and stakeholders. Our approach of appreciatitve inquiry coupled with applied experience allows us to be holistic and inclusive so everyone understands the big picture and how they fit into it. This healthy understanding of the landscape transforms an organization's perspective revealing resilience and alignment previously seen as redundancies and overlap.",
         },
         {
-          question: 'If you could only ask one question to each person you meet, what would that question be?',
+          question:
+            "We want to move to a cloud data provider but we have a significant amount of on-prem data. Won't a migration take years?",
           answer:
-            "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+            "It's normal to feel overwhelmed by the prospect of moving a production-level data warehouse to the cloud. The good news is, our approach will allow you to do so quickly and efficiently while maintaining your production systems. Our customers are delighted in seeing their digital transformation take place, with little to no disruption to their day-to-day operations.",
         },
       ],
     ]}
@@ -303,10 +293,10 @@ const meta = {
 
   <Stats
     items={[
-      { name: 'Migrations', value: '132K' },
-      { name: 'Roadmaps', value: '24.8K' },
-      { name: 'Replatforms', value: '10.3K' },
-      { name: 'Customers', value: '48.4K' },
+      { name: 'Years of Tech and Data Experience', value: '30+' },
+      { name: 'Vendor Partnerships', value: '150+' },
+      { name: 'Projects Completed', value: '3K' },
+      { name: 'Customers Served', value: '1.2K' },
     ]}
   />
 
@@ -315,21 +305,18 @@ const meta = {
   <CallToAction
     callToAction={{
       text: 'Book a Meeting',
-      href: 'https://github.com/onwidget/astrowind',
+      href: 'https://calendly.com/amp42/discovery',
       icon: 'tabler:calendar',
     }}
+    sectionId="book-a-meeting"
   >
     <Fragment slot="title">
-      AMP 42&nbsp; <br class="block sm:hidden" /><span
-        class="text-accent dark:text-white highlight sm:whitespace-nowrap"
-      >
+      <div><span class="text-primary">AMP</span><span class="text-accent">42</span></div>
+      <br class="block sm:hidden" /><span class="text-accent dark:text-white highlight sm:whitespace-nowrap">
         Excellence in technology and data strategy</span
       >
     </Fragment>
 
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
+    <Fragment slot="subtitle">Ready to discuss your organization's needs? Book a meeting with us today!</Fragment>
   </CallToAction>
 </Layout>

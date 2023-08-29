@@ -1,0 +1,68 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroMdx from '~/components/widgets/HeroMdx.astro';
+
+import { MetaSEO } from '~/types';
+
+export interface Props {}
+
+const { frontmatter } = Astro.props;
+
+const meta: MetaSEO = {
+  title: frontmatter?.title,
+};
+
+const hero: HeroMdx.Props = {
+  Title: frontmatter?.heroTitle,
+  SubTitle: frontmatter?.heroSubtitle,
+  CtaText: frontmatter?.heroCtaText,
+  CtaHref: frontmatter?.heroCtaHref,
+  CtaIcon: frontmatter?.heroCtaIcon,
+  Cta2Text: frontmatter?.heroCta2Text,
+  Cta2Href: frontmatter?.heroCta2Href,
+  Cta2Icon: frontmatter?.heroCta2Icon,
+  ImageSrc: frontmatter?.heroImageSrc,
+  ImageAlt: frontmatter?.heroImageAlt,
+};
+---
+
+<Layout {meta}>
+  <HeroMdx
+    callToAction={{
+      text: hero.CtaText ? hero.CtaText : 'Book a meeting',
+      href: hero.CtaHref ? hero.CtaHref : 'https://calendly.com/amp42/discovery',
+      icon: hero.CtaIcon ? hero.CtaIcon : 'tabler:calendar',
+    }}
+    callToAction2={{
+      text: hero.Cta2Text ? hero.Cta2Text : 'Learn more',
+      href: hero.Cta2Href ? hero.Cta2Href : '#features',
+      icon: hero.Cta2Icon ? hero.Cta2Icon : '',
+    }}
+    HeroImage={{
+      src: hero.ImageSrc,
+      alt: hero.ImageAlt ? hero.ImageAlt : 'Hero image',
+    }}
+    title={hero.Title}
+    subtitle={hero.SubTitle}
+  >
+    <Fragment slot="title">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">A strategic IT roadmap</span> is essential for organizations to identify gaps and inefficiencies,
+        streamline business processes, optimize the IT infrastructure and improve overall performance.
+      </span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">A strategic IT roadmap</span> is essential for organizations to identify gaps and inefficiencies,
+        streamline business processes, optimize the IT infrastructure and improve overall performance.
+      </span>
+    </Fragment>
+  </HeroMdx>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-10 max-w-4xl">
+    <div
+      class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+    >
+      <slot />
+    </div>
+  </section>
+</Layout>

@@ -7,19 +7,23 @@ export const headerData = {
       links: [
         {
           text: 'IT Strategy & Roadmapping',
-          href: getPermalink('/landing/saas'),
+          href: getPermalink('/technology-services/it-strategy-and-roadmapping'),
         },
         {
           text: 'Vendor Advisory & Resource Planning',
-          href: getPermalink('/landing/startup'),
+          href: getPermalink('/technology-services/vendor-advisory-and-resource-planning'),
         },
         {
           text: 'M&A Systems Integration',
-          href: getPermalink('/landing/startup'),
+          href: getPermalink('/technology-services/m-and-a-systems-integration'),
         },
         {
           text: 'Strategy Alignment Workshops',
-          href: getPermalink('/landing/mobile-app'),
+          href: getPermalink('/technology-services/strategy-alignment-workshops'),
+        },
+        {
+          text: 'Full-Stack Development Services',
+          href: getPermalink('/technology-services/full-stack-development-services'),
         },
       ],
     },
@@ -28,20 +32,25 @@ export const headerData = {
       links: [
         {
           text: 'Data Strategy & Governance',
-          href: getPermalink('/landing/saas'),
-        },
-        {
-          text: 'Data Management & Operations Consulting',
-          href: getPermalink('/landing/startup'),
-        },
-        {
-          text: 'Data Migration Consulting',
-          href: getPermalink('/landing/mobile-app'),
+          href: getPermalink('/data-consulting/data-strategy-and-governance'),
         },
         {
           text: 'Data Unification & Activation',
-          href: getPermalink('/landing/mobile-app'),
+          href: getPermalink('/data-consulting/data-unification-and-activation'),
         },
+        {
+          text: 'DataOps Planning & Implementation',
+          href: getPermalink('/data-consulting/dataops-planning-and-implementation'),
+        },
+        {
+          text: 'Data Management & Operations Consulting',
+          href: getPermalink('/data-consulting/data-management-and-operations-consulting'),
+        },
+        {
+          text: 'Data Migration Consulting',
+          href: getPermalink('/data-consulting/data-migration-consulting'),
+        },
+       
       ],
     },
     {
@@ -49,63 +58,83 @@ export const headerData = {
       href: '#',
     },
     {
-      text: 'Company',
+      text: 'About',
       href: '#',
-    },
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
     },
   ],
   actions: [
-    { type: 'button', text: 'Contact', href: 'https://github.com/onwidget/astrowind' }
+    { type: 'button', text: 'Contact', href: '/contact' }
   ],
 };
   
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Technology Services',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        {
+          text: 'IT Strategy & Roadmapping',
+          href: getPermalink('/technology-services/it-strategy-and-roadmapping'),
+        },
+        {
+          text: 'Vendor Advisory & Resource Planning',
+          href: getPermalink('/technology-services/vendor-advisory-and-resource-planning'),
+        },
+        {
+          text: 'M&A Systems Integration',
+          href: getPermalink('/technology-services/m-and-a-system-integration'),
+        },
+        {
+          text: 'Strategy Alignment Workshops',
+          href: getPermalink('/technology-services/strategy-alignment-workshops'),
+        },
+        {
+          text: 'Full-Stack Development Services',
+          href: getPermalink('/technology-services/strategy-alignment-workshops'),
+        },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Data Consulting',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        {
+          text: 'Data Strategy & Governance',
+          href: getPermalink('/data-consulting/data-strategy-and-governance'),
+        },
+        {
+          text: 'Data Unification & Activation',
+          href: getPermalink('/data-consulting/data-unification-and-activation'),
+        },
+        {
+          text: 'DataOps Planning & Implementation',
+          href: getPermalink('/data-consulting/dataops-planning-and-implementation'),
+        },
+        {
+          text: 'Data Management & Operations Consulting',
+          href: getPermalink('/data-consulting/data-management-and-operations-consulting'),
+        },
+        {
+          text: 'Data Migration Consulting',
+          href: getPermalink('/data-consulting/data-migration-consulting'),
+        },
       ],
     },
     {
-      title: 'Support',
+      title: 'Work',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Hire Us', href: '#' },
+        { text: 'Work with Us', href: '#' },
+        { text: 'Customer Stories', href: '#' },
       ],
     },
     {
-      title: 'Company',
+      title: 'About',
       links: [
         { text: 'About', href: '#' },
         { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Partners & Vendors', href: '#' },
+        { text: 'Contact Us', href: '#' },
+
       ],
     },
   ],
@@ -118,10 +147,10 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/SiriusBits/Forsemble' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(~/assets/images/favicon.svg)]"></span>
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://www.amp42.com/"> AMP42</a> · All rights reserved.
   `,
 };

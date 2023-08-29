@@ -10,6 +10,8 @@ import { getRelativeUrlByFilePath } from '~/utils/directories';
 
 import CustomStyles from '~/components/CustomStyles.astro';
 import SplitbeeAnalytics from './SplitbeeAnalytics.astro';
+import Clearbit from './Clearbit.astro';
+import Drift from './Drift.astro';
 
 export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
@@ -27,7 +29,7 @@ const defaultImage = SITE.defaultImage
   : '';
 
 const {
-  title = SITE.name,
+  title = SITE.name + SITE?.nameEnd,
   description = '',
   image: _image = defaultImage,
 
@@ -91,6 +93,10 @@ const image =
 {SITE.googleAnalyticsId && <GoogleAnalytics id={String(SITE.googleAnalyticsId)} partytown={true} />}
 
 {SITE.splitbeeAnalytics?.enabled && <SplitbeeAnalytics {...SITE.splitbeeAnalytics} />}
+
+{SITE.clearbit?.enabled && <Clearbit {...SITE.clearbit} />}
+
+{SITE.drift?.enabled && <Drift {...SITE.drift} />}
 
 <link rel="shortcut icon" href={getAsset('/favicon.ico')} />
 <link rel="icon" type="image/svg+xml" href={getAsset('/favicon.svg')} />

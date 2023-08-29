@@ -1,0 +1,11 @@
+---
+const {
+  url = 'https://tag.clearbitscripts.com/v1/pk_d75348d70dcddb447326401b3cea02b0/tags.js',
+  referrerPolicy = 'semi-strict-origin-when-cross-origin',
+  partytown = false,
+} = Astro.props;
+const attrs = partytown ? { type: 'text/partytown' } : {};
+---
+
+<!-- Clearbit -->
+<script async src={url} referrerpolicy={referrerPolicy} {...attrs}></script>
