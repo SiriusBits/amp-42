@@ -215,7 +215,7 @@ const getDrift = () => {
   const _default = {
     isEnabled: true,
     id: undefined,
-    partytown: true,
+    partytown: false,
   };
 
   return merge({}, _default, config?.drift ?? {}) as DriftConfig;
@@ -226,7 +226,7 @@ const getClearbit = () => {
     isEnabled: false,
     url: undefined,
     referrerPolicy: undefined,
-    partytown: true,
+    partytown: false,
   };
 
   return merge({}, _default, config?.clearbit ?? {}) as ClearbitConfig;

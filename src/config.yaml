@@ -70,12 +70,12 @@ clearbit:
   isEnabled: true
   url: 'https://tag.clearbitscripts.com/v1/pk_d75348d70dcddb447326401b3cea02b0/tags.js'
   referrerPolicy: 'strict-origin-when-cross-origin'
-  partyTown: true
+  partytown: false
 
 drift: 
   isEnabled: true
   id: '2ztye4gur223'
-  partyTown: true
+  partytown: false
 
 
 ui:
