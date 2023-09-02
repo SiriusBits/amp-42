@@ -3,8 +3,22 @@ import '@fontsource-variable/inter';
 
 // Primary 40% lighter hsl(140,100%,81%) Hex: 9EFFBE
 // Accent 40% darker hsl(207, 84%, 21%) Hex: 093A63
+// 'DM Sans'
 // Nunito
 // Dosis
+// Outfit
+// Roboto
+// Literata
+// 'IBM Plex Sans'
+// Karla
+// Poppins
+// 'Fira Sans'
+// 'Libre Franklin'
+// Inconsolata
+// Raleway
+// Oswald
+// 'Space Grotesk'
+// Urbanist
 ---
 
 <style is:inline is:global>
@@ -13,11 +27,36 @@ import '@fontsource-variable/inter';
     --aw-font-serif: var(--aw-font-sans);
     --aw-font-heading: var(--aw-font-sans);
 
+    --aw-color-primary: hsl(140, 100%, 41%); //#00d146
+    --aw-color-secondary: hsl(156, 77%, 43%);
+    --aw-color-accent: hsl(207, 84%, 61%);
+    --aw-color-text-page: hsl(221, 39%, 11%);
+    --aw-color-text-muted: hsl(215, 14%, 34%);
+    --aw-color-bg-page: hsl(0, 0%, 100%);
+    --aw-color-info: hsl(272, 51%, 51%); //
+    --aw-color-warning: #C24642;
+    --aw-color-error: #C24642;
+    --aw-color-link: #C24642;
+    --aw-color-link-active: #C24642;
+
+    --aw-color-text-heading: hsl(221, 39%, 11%);
+    --aw-color-text-default: hsl(221, 39%, 11%);
+
+    --aw-color-bg-page-dark: hsl(234, 83%, 7%);
+  }
+
+  .dark {
+    --aw-font-sans: 'Inter Variable';
+    --aw-font-serif: var(--aw-font-sans);
+    --aw-font-heading: var(--aw-font-sans);
+
     --aw-color-primary: hsl(140, 100%, 41%);
     --aw-color-secondary: hsl(156, 77%, 43%);
     --aw-color-accent: hsl(207, 84%, 61%);
-    --aw-color-text-page: rgb(17 24 39);
-    --aw-color-text-muted: rgb(75 85 99);
-    --aw-color-bg-page: rgb(255 255 255);
+
+    --aw-color-text-heading: hsla(221, 39%, 11%, 0.42);
+    --aw-color-text-default: hsl(215, 49%, 93%);
+    --aw-color-text-muted: hsla(215, 49%, 93%, 0.66);
+    --aw-color-bg-page: var(--aw-color-bg-page-dark);
   }
 </style>

@@ -1,6 +1,7 @@
 ---
-export interface Props {
-  id: string;
+import { Drift } from '~/types';
+export interface Props extends Drift {
+  id?: string;
   partytown?: boolean;
 }
 
