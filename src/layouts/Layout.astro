@@ -1,9 +1,9 @@
 ---
 import '~/assets/styles/tailwind.css';
 
-import { I18N_CONFIG } from '~/utils/config';
-import { DRIFT_CONFIG } from '~/utils/config';
-import { CLEARBIT_CONFIG } from '~/utils/config';
+import { I18N } from '~/utils/config';
+import { DRIFT } from '~/utils/config';
+import { CLEARBIT } from '~/utils/config';
 
 import CommonMeta from '~/components/common/CommonMeta.astro';
 import Favicons from '~/components/Favicons.astro';
@@ -23,15 +23,15 @@ export interface Props {
 }
 
 const { metadata = {} } = Astro.props;
-const { language, textDirection } = I18N_CONFIG;
+const { language, textDirection } = I18N;
 const drift = {
-  id: DRIFT_CONFIG.id,
-  partytown: DRIFT_CONFIG.partytown,
+  id: DRIFT.id,
+  partytown: DRIFT.partytown,
 };
 const clearbit = {
-  url: CLEARBIT_CONFIG.url,
-  referrerPolicy: CLEARBIT_CONFIG.referrerPolicy,
-  partytown: CLEARBIT_CONFIG.partytown,
+  url: CLEARBIT.url,
+  referrerPolicy: CLEARBIT.referrerPolicy,
+  partytown: CLEARBIT.partytown,
 };
 ---
 
@@ -45,10 +45,10 @@ const clearbit = {
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
-    {console.log(DRIFT_CONFIG)}
-    {console.log(CLEARBIT_CONFIG)}
-    {DRIFT_CONFIG?.isEnabled ? <Drift {...drift} /> : null}
-    {CLEARBIT_CONFIG?.isEnabled ? <Clearbit {...clearbit} /> : null}
+    {console.log(DRIFT)}
+    {console.log(CLEARBIT)}
+    {DRIFT?.isEnabled ? <Drift {...drift} /> : null}
+    {CLEARBIT?.isEnabled ? <Clearbit {...clearbit} /> : null}
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
