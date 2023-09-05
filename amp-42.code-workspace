@@ -10,6 +10,7 @@
 		},
 		"prettier.documentSelectors": [
 			"**/*.astro"
-		]
+		],
+		"workbench.colorTheme": "Night Owl Light"
 	}
 }
