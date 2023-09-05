@@ -45,8 +45,6 @@ const clearbit = {
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
-    {console.log(DRIFT)}
-    {console.log(CLEARBIT)}
     {DRIFT?.isEnabled ? <Drift {...drift} /> : null}
     {CLEARBIT?.isEnabled ? <Clearbit {...clearbit} /> : null}
   </head>
