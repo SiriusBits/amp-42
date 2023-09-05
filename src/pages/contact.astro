@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
+import EmbedContactUs from '~/components/widgets/EmbedContact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
@@ -10,14 +10,11 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <!-- HeroText Widget ******************* -->
+  <!-- HeroText Widget ******************* -->
 
-    <HeroText
-    tagline="Contact"
-    title="Let's Connect!"
-  />
+  <HeroText tagline="Contact" title="Let's Connect!" />
 
-  <ContactUs
+  <!--ContactUs
     title="Drop us a message today!"
     subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
     inputs={[
@@ -40,7 +37,9 @@ const metadata = {
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
     description="Our support team typically responds within 24 business hours."
-  />
+  /-->
+
+  <EmbedContactUs />
 
   <!-- Features2 Widget ************** -->
 
