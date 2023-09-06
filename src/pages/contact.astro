@@ -47,34 +47,70 @@ const metadata = {
     title="We are here to help!"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: "Let's chat",
+        description: `<a href="#drift-chat" onClick="drift.api.openChat();">Chat with us</a> for inquiries about our services, your needs, or call us during business hours to speak with someone.`,
       },
       {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+        title: 'Schedule a discovery',
+        description: 'Need help? Schedule a discovery call with us to discuss your needs and objectives.',
       },
       {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+        title: 'Data Garden Community',
+        description: 'Join us on the Data Garden Community to discuss your data needs and challenges.',
       },
       {
         title: 'Phone',
-        description: '+1 (234) 567-890',
+        description: '+1 (440) 941-2854',
         icon: 'tabler:headset',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: '<a href="mailto:inquiry@support.com">inquiry@support.com</a>',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        description: `<iframe id="discord-widget"
+    width="430"
+    height="275"
+    allowtransparency="true"
+    frameborder="0"
+    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" data-aw-toggle-color-scheme></iframe>`,
       },
     ]}
   />
 </Layout>
+<script is:inline>
+  const runColorMode = (fn) => {
+    if (!window.matchMedia) {
+      return;
+    }
+
+    const query = window.matchMedia('(prefers-color-scheme: dark)');
+
+    fn(query.matches);
+
+    query.addEventListener('change', (event) => fn(event.matches));
+  };
+
+  runColorMode((isDarkMode) => {
+    console.log('Changed!');
+    if (isDarkMode) {
+      updateTheme('dark');
+    } else {
+      updateTheme('light');
+    }
+  });
+
+  // Add the event listener to the window object
+  //window.addEventListener('storage', handleStorageEvent);
+
+  // Function to update the UI theme
+  function updateTheme(theme) {
+    const discordIframe = document.getElementById('discord-widget');
+    console.log(discordIframe + ' ' + theme);
+    discordIframe.setAttribute('src', 'https://discord.com/widget?id=1148674036109418558&theme=' + theme);
+  }
+
+  //const theme = localStorage.theme ? localStorage.theme : 'light';
+  //updateTheme(theme);
+</script>
