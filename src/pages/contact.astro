@@ -48,11 +48,12 @@ const metadata = {
     items={[
       {
         title: "Let's chat",
-        description: `<a href="#drift-chat" onClick="drift.api.openChat();">Chat with us</a> for inquiries about our services, your needs, or call us during business hours to speak with someone.`,
+        description: `<a href="#drift-chat" onClick="drift.api.openChat();" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">Chat with us</a> for inquiries about our services, your needs, or call us during business hours to speak with someone.`,
       },
       {
         title: 'Schedule a discovery',
-        description: 'Need help? Schedule a discovery call with us to discuss your needs and objectives.',
+        description:
+          'Need help? <a href="https://calendly.com/amp-42/discovery" target="_blank" rel="noopener noreferrer" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">Chat with us</a> to Schedule a discovery call with us to discuss your needs and objectives.',
       },
       {
         title: 'Data Garden Community',
@@ -65,7 +66,8 @@ const metadata = {
       },
       {
         title: 'Email',
-        description: '<a href="mailto:inquiry@support.com">inquiry@support.com</a>',
+        description:
+          '<a href="mailto:inquiry@support.com" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">inquiry@amp42.com</a>',
         icon: 'tabler:mail',
       },
       {
@@ -101,16 +103,10 @@ const metadata = {
     }
   });
 
-  // Add the event listener to the window object
-  //window.addEventListener('storage', handleStorageEvent);
-
   // Function to update the UI theme
   function updateTheme(theme) {
     const discordIframe = document.getElementById('discord-widget');
     console.log(discordIframe + ' ' + theme);
     discordIframe.setAttribute('src', 'https://discord.com/widget?id=1148674036109418558&theme=' + theme);
   }
-
-  //const theme = localStorage.theme ? localStorage.theme : 'light';
-  //updateTheme(theme);
 </script>
