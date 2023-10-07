@@ -77,6 +77,10 @@ drift:
   id: '2ztye4gur223'
   partytown: false
 
+cookiebanner: 
+  isEnabled: true
+  url: 'https://app.getterms.io/cookie-consent/embed/b4935a89-a7ad-4538-a5fa-dc2b0a3390e5'
+  partytown: false
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

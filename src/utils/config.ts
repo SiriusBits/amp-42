@@ -80,6 +80,12 @@ export interface ClearbitConfig {
   partytown?: boolean;
 }
 
+export interface CookieBannerConfig {
+  isEnabled: boolean;
+  url?: string;
+  partytown?: boolean;
+}
+
 const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   site?: SiteConfig;
   metadata?: MetaDataConfig;
@@ -91,6 +97,7 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   analytics?: unknown;
   drift?: unknown;
   clearbit?: unknown;
+  cookiebanner?: unknown;
 };
 
 const DEFAULT_SITE_NAME = 'AMP42';
@@ -232,6 +239,16 @@ const getClearbit = () => {
   return merge({}, _default, config?.clearbit ?? {}) as ClearbitConfig;
 };
 
+const getCookieBanner = () => {
+  const _default = {
+    isEnabled: true,
+    url: undefined,
+    partytown: false,
+  };
+
+  return merge({}, _default, config?.cookiebanner ?? {}) as CookieBannerConfig;
+};
+
 export const SITE = getSite();
 export const I18N = getI18N();
 export const METADATA = getMetadata();
@@ -240,3 +257,4 @@ export const UI = getUI();
 export const ANALYTICS = getAnalytics();
 export const DRIFT = getDrift();
 export const CLEARBIT = getClearbit();
+export const COOKIEBANNER = getCookieBanner();

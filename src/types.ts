@@ -93,6 +93,11 @@ export interface Clearbit {
   partytown?: boolean;
 }
 
+export interface CookieBanner {
+  url?: string;
+  partytown?: boolean;
+}
+
 export interface Image {
   src: string;
   alt?: string;

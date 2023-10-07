@@ -141,6 +141,8 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Cookies', href: getPermalink('/cookies') },
+    { text: 'Acceptable Use', href: getPermalink('/acceptable-use') },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/getAMP42' },
