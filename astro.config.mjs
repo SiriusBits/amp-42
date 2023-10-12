@@ -85,4 +85,10 @@ export default defineConfig({
       },
     },
   },
+  redirects: {
+    '/meet': {
+      status: 302,
+      destination: 'https://calendly.com/amp-42/discovery',
+    },
+  },
 });
