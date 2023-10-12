@@ -90,5 +90,9 @@ export default defineConfig({
       status: 302,
       destination: 'https://calendly.com/amp-42/discovery',
     },
+    '/contact-us': {
+      status: 302,
+      destination: '/contact/',
+    },
   },
 });
