@@ -1,4 +1,5 @@
 ---
+import { DRIFT } from '~/utils/config';
 import type { Drift } from '~/types';
 export interface Props extends Drift {
   id?: string;
@@ -6,7 +7,7 @@ export interface Props extends Drift {
   isEnabled?: boolean;
 }
 
-const { id = 'DRIFT_IOD', partytown = false, isEnabled = true } = Astro.props;
+const { id = DRIFT?.id, partytown = DRIFT?.partytown, isEnabled = DRIFT?.isEnabled } = Astro.props;
 
 const attrs = partytown ? { type: 'text/partytown' } : {};
 ---

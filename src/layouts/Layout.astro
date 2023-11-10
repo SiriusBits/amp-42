@@ -17,10 +17,11 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 import Drift from '~/components/common/Drift.astro';
 import Clearbit from '~/components/common/Clearbit.astro';
 import CookieBanner from '~/components/common/CookieBanner.astro';
+import RudderStack from '~/components/common/RudderStack.astro';
 
-import { MetaData as MetaDataType } from '~/types';
+import type { MetaData as MetaDataType } from '~/types';
 import type { Code, Debug } from 'astro:components';
-import { Drift as DriftType } from '~/types';
+import type { Drift as DriftType } from '~/types';
 
 export interface Props {
   metadata?: MetaDataType;
@@ -29,11 +30,6 @@ export interface Props {
 
 const { metadata = {}, drift = { id: DRIFT.id, partytown: DRIFT.partytown, isEnabled: DRIFT.isEnabled } } = Astro.props;
 const { language, textDirection } = I18N;
-// const drift = {
-//   id: DRIFT.id,
-//   partytown: DRIFT.partytown,
-//   isEnabled: DRIFT.isEnabled,
-// };
 const clearbit = {
   url: CLEARBIT.url,
   referrerPolicy: CLEARBIT.referrerPolicy,
@@ -55,6 +51,7 @@ const cookieBanner = {
     <ApplyColorMode />
     <Metadata {...metadata} />
     <SiteVerification />
+    <RudderStack />
     <Analytics />
     {drift.isEnabled ? <Drift {...drift} /> : null}
     {CLEARBIT?.isEnabled ? <Clearbit {...clearbit} /> : null}
