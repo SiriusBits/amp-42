@@ -85,6 +85,7 @@ export interface MetaDataTwitter {
 export interface Drift {
   id?: string;
   partytown?: boolean;
+  isEnabled?: boolean;
 }
 
 export interface Clearbit {

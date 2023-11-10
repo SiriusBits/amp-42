@@ -20,17 +20,20 @@ import CookieBanner from '~/components/common/CookieBanner.astro';
 
 import { MetaData as MetaDataType } from '~/types';
 import type { Code, Debug } from 'astro:components';
+import { Drift as DriftType } from '~/types';
 
 export interface Props {
   metadata?: MetaDataType;
+  drift?: DriftType;
 }
 
-const { metadata = {} } = Astro.props;
+const { metadata = {}, drift = { id: DRIFT.id, partytown: DRIFT.partytown, isEnabled: DRIFT.isEnabled } } = Astro.props;
 const { language, textDirection } = I18N;
-const drift = {
-  id: DRIFT.id,
-  partytown: DRIFT.partytown,
-};
+// const drift = {
+//   id: DRIFT.id,
+//   partytown: DRIFT.partytown,
+//   isEnabled: DRIFT.isEnabled,
+// };
 const clearbit = {
   url: CLEARBIT.url,
   referrerPolicy: CLEARBIT.referrerPolicy,
@@ -53,7 +56,7 @@ const cookieBanner = {
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
-    {DRIFT?.isEnabled ? <Drift {...drift} /> : null}
+    {drift.isEnabled ? <Drift {...drift} /> : null}
     {CLEARBIT?.isEnabled ? <Clearbit {...clearbit} /> : null}
   </head>
 

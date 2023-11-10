@@ -7,15 +7,17 @@ import Footer from '~/components/widgets/Footer.astro';
 import { headerData, footerData } from '~/navigation';
 
 import { MetaData } from '~/types';
+import { Drift } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  drift?: Drift;
 }
 
-const { metadata } = Astro.props;
+const { metadata, drift } = Astro.props;
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} drift={drift}>
   <slot name="header">
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>

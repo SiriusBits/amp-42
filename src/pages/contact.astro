@@ -7,9 +7,13 @@ import Features2 from '~/components/widgets/Features2.astro';
 const metadata = {
   title: 'Contact',
 };
+const drift = {
+  id: 'amp42',
+  isEnabled: false,
+};
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} drift={drift}>
   <!-- HeroText Widget ******************* -->
 
   <HeroText tagline="Contact" title="Let's Connect!" />
@@ -53,7 +57,7 @@ const metadata = {
       {
         title: 'Schedule a discovery',
         description:
-          'Need help? <a href="https://calendly.com/amp-42/discovery" target="_blank" rel="noopener noreferrer" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">Visit our meeting request page</a> to schedule a discovery call with us to discuss your needs and objectives.',
+          'Need help? <a href="/meet" target="_blank" rel="noopener noreferrer" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">Visit our meeting request page</a> to schedule a discovery call with us to discuss your needs and objectives.',
       },
       {
         title: 'Data Garden Community',

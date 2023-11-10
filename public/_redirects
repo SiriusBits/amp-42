@@ -1,2 +1,3 @@
 # Not working with Netlify.toml so putting here
-/meet   https://calendly.com/amp-42/discovery #IGNORED! Apparently, you cannot use redirects with static output
+
+/meet   <https://tidycal.com/amp42/discovery> #IGNORED! Apparently, you cannot use redirects with static output

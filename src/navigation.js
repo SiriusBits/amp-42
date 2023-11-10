@@ -133,7 +133,7 @@ export const footerData = {
         { text: 'About', href: '#' },
         { text: 'Blog', href: '#' },
         { text: 'Partners & Vendors', href: '#' },
-        { text: 'Contact Us', href: '#' },
+        { text: 'Contact Us', href: '/meet' },
 
       ],
     },
