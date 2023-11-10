@@ -294,5 +294,3 @@ export interface Content extends Headline, Widget {
 }
 
 export interface Contact extends Headline, Form, Widget {}
-
-export interface EmbedContact extends Headline, Widget {}
