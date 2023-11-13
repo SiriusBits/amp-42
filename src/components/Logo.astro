@@ -1,6 +1,11 @@
 ---
-import { Image } from '@astrojs/image/components';
+import Image from '~/components/common/Image.astro';
 import logo from '/src/assets/images/amp42-logo.png';
 ---
-
-<Image src={logo} class="max-w-[310px] max-h-[85px]" alt="" />
+<span style=`width: 15rem;
+height: 5rem;
+background-size: cover;
+background: url(${logo.src});
+background-size: contain;
+background-repeat: no-repeat;`></span>
+{/*<Image src={logo} class="max-w-[310px] max-h-[85px]" alt="" />*/}

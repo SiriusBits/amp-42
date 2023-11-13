@@ -1,10 +1,13 @@
 ---
-export interface Props {
-  id: string;
+import { DRIFT } from '~/utils/config';
+import type { Drift } from '~/types';
+export interface Props extends Drift {
+  id?: string;
   partytown?: boolean;
+  isEnabled?: boolean;
 }
 
-const { id = 'DRIFT_ID', partytown = false } = Astro.props;
+const { id = DRIFT?.id, partytown = DRIFT?.partytown, isEnabled = DRIFT?.isEnabled } = Astro.props;
 
 const attrs = partytown ? { type: 'text/partytown' } : {};
 ---

@@ -133,7 +133,7 @@ export const footerData = {
         { text: 'About', href: '#' },
         { text: 'Blog', href: '#' },
         { text: 'Partners & Vendors', href: '#' },
-        { text: 'Contact Us', href: '#' },
+        { text: 'Contact Us', href: '/meet' },
 
       ],
     },
@@ -141,13 +141,15 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Cookies', href: getPermalink('/cookies') },
+    { text: 'Acceptable Use', href: getPermalink('/acceptable-use') },
   ],
   socialLinks: [
-    { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/getAMP42' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/amp42/' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/getAMP42' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/SiriusBits/Forsemble' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/SiriusBits' },
   ],
   footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(~/assets/images/favicon.svg)]"></span>

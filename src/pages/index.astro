@@ -1,45 +1,55 @@
 ---
-import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import LatestPosts from '~/components/blog/LatestPosts.astro';
+import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-const meta = {
-  title: SITE.title,
-  description: SITE.description,
-  dontUseTitleTemplate: true,
+const metadata = {
+  title: 'AMP42 — Excellence in technology and data strategy',
+  description: 'Data strategy, planning and execution for startups, B2B companies and enterprise organizations.',
+  ignoreTitleTemplate: true,
 };
 ---
 
-<Layout {meta}>
+<Layout {metadata}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Book a Meeting', href: 'https://calendly.com/amp42/discovery', icon: 'tabler:calendar' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/3d-data-points-hero.png'), alt: 'AMP42 Hero Image' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Meeting',
+        href: '/meet',
+        target: '_blank',
+        icon: 'tabler:calendar',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/3d-data-points-hero.png', alt: 'AMP42 Hero Image' }}
   >
     <Fragment slot="title">
-      Data-driven technology strategy, leveraging the
-      <span class="text-accent dark:text-white highlight"> Modern Data Stack</span> to transform your business
+      Transform your business with a
+      <br /><span class="text-primary font-semibold"> data-driven technology strategy</span>, leveraging the
+      <span class="text-accent dark:text-white highlight"> Modern Data Stack</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="text-primary font-semibold">AMP</span><span class="text-accent font-semibold">42</span> empowers businesses
-        to succeed by leveraging the latest in data-driven technology strategy and the Modern Data Stack.
+        <span class="text-primary font-semibold">AMP</span><span class="text-accent font-semibold">42</span> empowers
+        businesses to succeed by leveraging the latest in data-driven technology strategy and the Modern Data Stack.
       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AMP42: Expert Solutions</span> We help transform businesses
-      through our expertise in data engineering, technology planning, solution design, full-stack development, AI and machine
-      learning, analytics, and visualization, enabling our clients to make better-informed decisions and achieve their goals.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">AMP42: Expert Solutions</span> We help transform
+      businesses through our expertise in data engineering, technology planning, solution design, full-stack
+      development, AI and machine learning, analytics, and visualization, enabling our clients to make better-informed
+      decisions and achieve their goals.
     </Fragment>
   </Hero>
 
@@ -50,87 +60,84 @@ const meta = {
   <!-- Features Widget *************** -->
 
   <Features
-    highlight="Services"
+    id="features"
+    tagline="Services"
     title="Technology planning and data and analytics engineering strategy"
     subtitle="We leverage decades of collective knowledge, real-world experience and know-how to deliver success for our clients and partners in these areas."
     items={[
-      [
-        {
-          title: 'IT Strategy & Roadmapping',
-          description:
-            'With our expertise in both business and technology, our team helps align technology investments to your business strategy and drive top line growth while maximizing value as you bring your strategy to life.',
-          icon: 'road',
-        },
-        {
-          title: 'Vendor Advisory & Resource Planning',
-          description:
-            'Our collective business experience enables us to help provide an independent, pragmatic, and thoughtful approach to sifting through the hype and matching a solution to your unique challenges.',
-          icon: 'tabler:checkup-list',
-        },
-        /*{
+      {
+        title: 'IT Strategy & Roadmapping',
+        description:
+          'With our expertise in both business and technology, our team helps align technology investments to your business strategy and drive top line growth while maximizing value as you bring your strategy to life.',
+        icon: 'road',
+      },
+      {
+        title: 'Data Strategy & Governance',
+        description:
+          'Our data strategy and governance model provides an achievable vision and flexible framework to improve the effectiveness of data assets without disrupting your business operations.',
+        icon: 'tabler:compass',
+      },
+      {
+        title: 'Vendor Advisory & Resource Planning',
+        description:
+          'Our collective business experience enables us to help provide an independent, pragmatic, and thoughtful approach to sifting through the hype and matching a solution to your unique challenges.',
+        icon: 'tabler:checkup-list',
+      },
+      {
+        title: 'DataOps Planning & Implementation',
+        description:
+          'We help organizations enhance DataOps practices, combining BI Ops and ML Ops to accelerate AI Ops for efficient decision-making, intelligent automation and proactive insights to optimize IT operations.',
+        icon: 'chart-grid-dots',
+      },
+      /*{
           title: 'Technical Solution Architecture Services',
           description:
             'We provide custom software solutions with expertly designed, scalable, and high-performing architectures, tailored to your tech stack and specific needs, ensuring successful project outcomes and future adaptability.',
           icon: 'tabler:checkup-list',
         },*/
-        {
-          title: 'M&A Systems Integration',
-          description:
-            'Marrying two organizations is a tricky proposition but aligning processes and systems doesn’t have to be the bottleneck. We help companies from the earliest stages of planning to the final cutover.',
-          icon: 'topology-star-ring-3',
-        },
-        {
-          title: 'Strategy Alignment Workshops',
-          description:
-            'Key stakeholder interviews to understand how departmental goals and desired projects align with corporate strategy will assist in shaping cross-functional strategy alignment workshops.',
-          icon: 'users-group',
-        },
-        {
-          title: 'Full-Stack Development Services',
-          description:
-            'From front-end user interfaces to back-end server logic, our team of experienced developers ensures seamless integration and high-performance applications, delivering a comprehensive and efficient digital experience for your customers.',
-          icon: 'user-code',
-        },
-      ],
-      [
-        {
-          title: 'Data Strategy & Governance',
-          description:
-            'Our data strategy and governance model provides an achievable vision and flexible framework to improve the effectiveness of data assets without disrupting your business operations.',
-          icon: 'tabler:compass',
-        },
-        {
-          title: 'Data Unification & Activation',
-          description:
-            'We help clients unify and activate data from disparate sources to derive insights and drive actions.',
-          icon: 'brand-snowflake',
-        },
-        {
-          title: 'DataOps Planning & Implementation',
-          description:
-            'We help organizations enhance DataOps practices, combining BI Ops and ML Ops to accelerate AI Ops for efficient decision-making, intelligent automation and proactive insights to optimize IT operations.',
-          icon: 'chart-grid-dots',
-        },
-        {
-          title: 'Data Management & Operations',
-          description:
-            'We advise organizations on managing and optimizing data operations, ensuring data quality, implementing observability policies, and creating efficient workflows to support data-driven decision-making.',
-          icon: 'database-cog',
-        },
-        {
-          title: 'Data Migration Consulting',
-          description:
-            'Whether it’s moving to the cloud or to a new platform, data migration creates a sizable impact on your business and daily operations. Our data migration services enable rapid movement of your data with an effective, efficient, and secure approach.',
-          icon: 'stack-pop',
-        },
-      ],
+      {
+        title: 'M&A Systems Integration',
+        description:
+          "Marrying two organizations is a tricky proposition but aligning processes and systems doesn't have to be the bottleneck. We help companies from the earliest stages of planning to the final cutover.",
+        icon: 'topology-star-ring-3',
+      },
+      {
+        title: 'Data Unification & Activation',
+        description:
+          'We help clients unify and activate data from disparate sources to derive insights and drive actions.',
+        icon: 'brand-snowflake',
+      },
+      {
+        title: 'Strategy Alignment Workshops',
+        description:
+          'Key stakeholder interviews to understand how departmental goals and desired projects align with corporate strategy will assist in shaping cross-functional strategy alignment workshops.',
+        icon: 'users-group',
+      },
+      {
+        title: 'Data Migration Consulting',
+        description:
+          "Whether it's moving to the cloud or to a new platform, data migration creates a sizable impact on your business and daily operations. Our data migration services enable rapid movement of your data with an effective, efficient, and secure approach.",
+        icon: 'stack-pop',
+      },
+      {
+        title: 'Full-Stack Development Services',
+        description:
+          'From front-end user interfaces to back-end server logic, our team of experienced developers ensures seamless integration and high-performance applications, delivering a comprehensive and efficient digital experience for your customers.',
+        icon: 'user-code',
+      },
+      {
+        title: 'Data Management & Operations',
+        description:
+          'We advise organizations on managing and optimizing data operations, ensuring data quality, implementing observability policies, and creating efficient workflows to support data-driven decision-making.',
+        icon: 'database-cog',
+      },
     ]}
   />
 
   <!-- Content Widget **************** -->
 
   <Content
-    highlight="Modernize your data stack"
+    tagline="Modernize your data stack"
     title="Three pillars of good data"
     items={[
       {
@@ -150,15 +157,18 @@ const meta = {
       },
     ]}
     image={{
-      src: import('~/assets/images/three-data-pillars.jpg'),
-      alt: 'Colorful Image',
+      src: '~/assets/images/three-data-pillars.jpg',
+      alt: 'Business woman in a technology office',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         A new way of thinking about data strategy
       </h3>
-      The modern data stack makes historically challenging work simpler, easier and more efficient.
+       The modern data stack makes historically challenging work simpler, easier and more efficient.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -167,18 +177,18 @@ const meta = {
   <Features2
     title="Technology Partners and Vendors"
     subtitle="Our network of partners and vendors platforms help us deliver world-class solutions"
-    highlight=""
+    tagline=""
     items={[
       {
         title: 'Snowflake',
         description:
           'Snowflake is a multi-vendor cloud data platform built on a hybrid (shared-disk and shared-nothing) high-performance scalable database architecture.',
-        icon: 'logos:snowflake-icon',
+        icon: 'brand-snowflake',
       },
       {
         title: 'Fivetran',
         description:
-          'Fivetran is an automated data integration platform that simplifies data replication from disparate data sources into an organization’s data warehouse.',
+          "Fivetran is an automated data integration platform that simplifies data replication from disparate data sources into an organization's data warehouse.",
         icon: 'fivetran-icon',
       },
       {
@@ -203,7 +213,7 @@ const meta = {
         title: 'Segment',
         description:
           'Segment is a customer data infrastructure (CDI) platform that collects, stores and routes data from users to hundreds of tools and digital properties.',
-        icon: 'logos:segment-icon',
+        icon: 'segment-icon',
       },
       {
         title: 'ZoomInfo',
@@ -224,11 +234,15 @@ const meta = {
         icon: 'hex-icon',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <LatestPosts
+  <BlogHighlightedPosts
     title="Explore our ideas, guides and stay informed"
     information={`This collection of articles, posts, and guides is a free resource of information we collect and share regarding the latest tools, trends, and topics in technology and data.
 		`}
@@ -245,70 +259,71 @@ const meta = {
   <FAQs
     title="Frequently Asked Questions"
     subtitle="The modern technology and data landscape is complex, ever changing and fast-paced. AMP42 can help your business overcome these hurdles, break down data siloes and overcome your technical debt."
-    highlight="FAQs"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
     items={[
-      [
-        {
-          question:
-            'We have invested a significant amount in a <em>[tech/data vendor]</em> or <em>[platform]</em> but we are struggling to roll it out, increase adoption, or intergrate it with our core business systems. How can AMP42 help with deployment and adoption to get measurable ROI from our investment?',
-          answer:
-            'The <a href="https://www.zippia.com/advice/cloud-adoption-statistics/" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">average enterprise</a> uses <strong>1,295 cloud services</strong> and <a href="https://nexthink.com/resource/unused-software-licenses" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">it\'s estimated</a> that nearly half of enterprise software goes unused, costing businesses an estimated $536,923,8121 per year. Our team\'s experienced professionals have successfully deployed, re-platformed and transformed hundreds of the most routinely used technology and data vendors. We help organizations accelerate the deployment and adoption of these systems, empowering your team and their stakeholders to get the most from both your technology investments and the valuable employees that use them.',
-        },
-        {
-          question: 'Our data and tech stack is a mess. Where do we start?',
-          answer:
-            'Every organization has some trouble managing their data, and tech stack sprawl is one of the most common reasons organizations experience inefficiencies, poor collaboration, and lose money. The good news is, we can help make an immediate impact with an easy, guided, appreciative inquiry. Oh and <a href="#book-a-meeting" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">it\'s completely <em>free</em></a>.',
-        },
-        {
-          question:
-            'Working with our procurement/cyber security/legal team(s) takes <em>forever</em>. How would working with a technology and data partner like AMP42 help?',
-          answer:
-            'Internal support teams are an important part of a healthy business, even if it they seem to slow things down or over-complicate the process. The good news is, we love partnering with procurement, helping translate technical details for our friends in legal, and privacy and security are as important to us as they are to your cyber security business partners. Our team of trusted advisors have extensive experience working with these teams and the vednors you want to leverage. We can help you navigate the pitfalls and challenges that come with the territory.',
-        },
-      ],
-      [
-        {
-          question:
-            "<strong>AI</strong> and <strong>machine learning</strong> seem like buzzwords, irrelevant to our business but we're getting pressure from the business to include them. How can we use these technologies to improve our business or product?",
-          answer:
-            '<strong>Chat GPT! LLMs! AI Assitants!</strong> With so much hype in the AI and machine learning space, it can be hard to understand where and how your business could benefit from this emerging industry. We can help you cut through the static and understand the opportunities for introducing AI, LLMs and machine learning in ways that can improve your business or enhance your products and solutions.',
-        },
-        {
-          question:
-            'Our Sales/Marketing/IS/Product/Customer Success teams struggle to work together. How can we achieve better alignment and collaboration?',
-          answer:
-            "Whether you have an in-house team or rely on contractors and professional services or <strong>both</strong>, deploying, integrating and driving user adoption of enterprise technology and data systems is a tremendous challenge. As organizations grow in size and complexity, this is further complicated amongst internal teams and stakeholders. Our approach of appreciatitve inquiry coupled with applied experience allows us to be holistic and inclusive so everyone understands the big picture and how they fit into it. This healthy understanding of the landscape transforms an organization's perspective revealing resilience and alignment previously seen as redundancies and overlap.",
-        },
-        {
-          question:
-            "We want to move to a cloud data provider but we have a significant amount of on-prem data. Won't a migration take years?",
-          answer:
-            "It's normal to feel overwhelmed by the prospect of moving a production-level data warehouse to the cloud. The good news is, our approach will allow you to do so quickly and efficiently while maintaining your production systems. Our customers are delighted in seeing their digital transformation take place, with little to no disruption to their day-to-day operations.",
-        },
-      ],
+      {
+        title:
+          'We have invested a significant amount in a <em>[tech/data vendor]</em> or <em>[platform]</em> but we are struggling to roll it out, increase adoption, or intergrate it with our core business systems. How can AMP42 help with deployment and adoption to get measurable ROI from our investment?',
+        description:
+          'The <a href="https://www.zippia.com/advice/cloud-adoption-statistics/" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">average enterprise</a> uses <strong>1,295 cloud services</strong> and <a href="https://nexthink.com/resource/unused-software-licenses" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">it\'s estimated</a> that nearly half of enterprise software goes unused, costing businesses an estimated $536,923,8121 per year. Our team\'s experienced professionals have successfully deployed, re-platformed and transformed hundreds of the most routinely used technology and data vendors. We help organizations accelerate the deployment and adoption of these systems, empowering your team and their stakeholders to get the most from both your technology investments and the valuable employees that use them.',
+      },
+      {
+        title:
+          'Our Sales/Marketing/IS/Product/Customer Success teams struggle to work together. How can we achieve better alignment and collaboration?',
+        description:
+          "Whether you have an in-house team or rely on contractors and professional services or <strong>both</strong>, deploying, integrating and driving user adoption of enterprise technology and data systems is a tremendous challenge. As organizations grow in size and complexity, this is further complicated amongst internal teams and stakeholders. Our approach of appreciatitve inquiry coupled with applied experience allows us to be holistic and inclusive so everyone understands the big picture and how they fit into it. This healthy understanding of the landscape transforms an organization's perspective revealing resilience and alignment previously seen as redundancies and overlap.",
+      },
+      {
+        title:
+          "<strong>AI</strong> and <strong>machine learning</strong> seem like buzzwords, irrelevant to our business but we're getting pressure from the business to include them. How can we use these technologies to improve our business or product?",
+        description:
+          '<strong>Chat GPT! LLMs! AI Assitants!</strong> With so much hype in the AI and machine learning space, it can be hard to understand where and how your business could benefit from this emerging industry. We can help you cut through the static and understand the opportunities for introducing AI, LLMs and machine learning in ways that can improve your business or enhance your products and solutions.',
+      },
+      {
+        title:
+          'Working with our procurement/cyber security/legal team(s) takes <em>forever</em>. How would working with a technology and data partner like AMP42 help?',
+        description:
+          'Internal support teams are an important part of a healthy business, even if it they seem to slow things down or over-complicate the process. The good news is, we love partnering with procurement, helping translate technical details for our friends in legal, and privacy and security are as important to us as they are to your cyber security business partners. Our team of trusted advisors have extensive experience working with these teams and the vednors you want to leverage. We can help you navigate the pitfalls and challenges that come with the territory.',
+      },
+      {
+        title: 'Our data and tech stack is a mess. Where do we start?',
+        description:
+          'Every organization has some trouble managing their data, and tech stack sprawl is one of the most common reasons organizations experience inefficiencies, poor collaboration, and lose money. The good news is, we can help make an immediate impact with an easy, guided, appreciative inquiry. Oh and <a href="#book-a-meeting" rel="external" class="anchor dark:text-white highlight hover:text-primary hover:underline text-accent">it\'s completely <em>free</em></a>.',
+      },
+      {
+        title:
+          "We want to move to a cloud data provider but we have a significant amount of on-prem data. Won't a migration take years?",
+        description:
+          "It's normal to feel overwhelmed by the prospect of moving a production-level data warehouse to the cloud. The good news is, our approach will allow you to do so quickly and efficiently while maintaining your production systems. Our customers are delighted in seeing their digital transformation take place, with little to no disruption to their day-to-day operations.",
+      },
     ]}
   />
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    items={[
-      { name: 'Years of Tech and Data Experience', value: '30+' },
-      { name: 'Vendor Partnerships', value: '150+' },
-      { name: 'Projects Completed', value: '3K' },
-      { name: 'Customers Served', value: '1.2K' },
+    stats={[
+      { title: 'Years of Tech and Data Experience', amount: '30+' },
+      { title: 'Vendor Partnerships', amount: '150+' },
+      { title: 'Projects Completed', amount: '3K' },
+      { title: 'Customers Served', amount: '1.2K' },
     ]}
   />
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    callToAction={{
-      text: 'Book a Meeting',
-      href: 'https://calendly.com/amp42/discovery',
-      icon: 'tabler:calendar',
-    }}
-    sectionId="book-a-meeting"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Meeting',
+        href: '/meet',
+        target: '_blank',
+        icon: 'tabler:calendar',
+      },
+    ]}
+    id="book-a-meeting"
   >
     <Fragment slot="title">
       <div><span class="text-primary">AMP</span><span class="text-accent">42</span></div>

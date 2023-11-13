@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.mdx": "mdx"
+		},
+		"prettier.documentSelectors": [
+			"**/*.astro"
+		],
+		"workbench.colorTheme": "Night Owl Light"
+	}
+}

@@ -1,0 +1,6 @@
+---
+const { url = '', partytown = false } = Astro.props;
+const attrs = partytown ? { type: 'text/partytown' } : {};
+---
+
+<script type="text/javascript" src={url} {...attrs}></script>
