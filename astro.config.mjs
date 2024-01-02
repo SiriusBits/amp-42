@@ -94,5 +94,13 @@ export default defineConfig({
       status: 302,
       destination: '/contact/',
     },
+    '/tech-stack': {
+      status: 301,
+      destination: 'https://miro.com/app/board/uXjVMONKHUs=/?share_link_id=60177088119',
+    },
+    '/techstack': {
+      status: 301,
+      destination: 'https://miro.com/app/board/uXjVMONKHUs=/?share_link_id=60177088119',
+    }
   },
 });
