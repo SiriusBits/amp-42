@@ -19,8 +19,10 @@ import Clearbit from '~/components/common/Clearbit.astro';
 import CookieBanner from '~/components/common/CookieBanner.astro';
 import RudderStack from '~/components/common/RudderStack.astro';
 
+// Uncomment line below to activate View Transitions
+// import { ViewTransitions } from 'astro:transitions';
+
 import type { MetaData as MetaDataType } from '~/types';
-import type { Code, Debug } from 'astro:components';
 import type { Drift as DriftType } from '~/types';
 
 export interface Props {
@@ -55,6 +57,9 @@ const cookieBanner = {
     <Analytics />
     {drift.isEnabled ? <Drift {...drift} /> : null}
     {CLEARBIT?.isEnabled ? <Clearbit {...clearbit} /> : null}
+
+    <!-- Uncomment line below to activate View Transitions -->
+    <!-- <ViewTransitions fallback="swap" /> -->
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
