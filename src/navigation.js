@@ -63,7 +63,7 @@ export const headerData = {
     },
   ],
   actions: [
-    { type: 'button', text: 'Contact', href: '/contact' }
+    { icon: 'tabler:headset', text: 'Contact', href: '/contact' }
   ],
 };
   
